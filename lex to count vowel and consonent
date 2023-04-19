@@ -1,0 +1,29 @@
+%{
+#include<stdio.h>
+#include<string.h>
+int c=0;
+%}
+
+%%
+
+
+[a-zA-Z]  {c++;}
+if(yyleng>c)
+{
+c=yyleng;
+}
+
+  
+
+%%
+int yywrap(){}
+
+int main()
+{
+  yylex();
+  printf("no of vowels %d" ,v);
+  printf("no of consonent%d", c);
+  
+  return 0;
+}
+  
